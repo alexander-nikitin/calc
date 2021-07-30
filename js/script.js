@@ -1,28 +1,22 @@
-let money;
-let income;
-let addExpenses;
-let deposit;
-let mission;
-let period;
+let num = 266219;
 
-money = 100000;
-income = 'фриланс';
-addExpenses = 'Подписки, Питомец, Подарки, Развлечения, Хотелки';
-deposit = true;
-mission = 1000000;
-period = 12
+num = String(num);
+num = num.split('');
 
-console.log(typeof(money));
-console.log(typeof(income));
-console.log(typeof(deposit));
+for (i=0; i < num.length; i++) {
+    num[i] = +num[i];
+}
 
-console.log(addExpenses.length);
+let multi = 1;
 
-console.log('Период равен ' + period + ' месяцев');
-console.log('Цель заработать ' + mission + ' рублей');
+for (i=0; i < num.length; i++) {
+    multi = multi * num[i];
+}
 
-addExpenses = addExpenses.toLowerCase();
-console.log(addExpenses.split(', '));
+console.log('Произведение всех цифр числа: ' + multi);
 
-let budgetDay = money/30
-console.log(budgetDay);
+multi = multi ** 3;
+
+console.log(multi);
+
+console.log('Вывод первых двух цифр числа: ' + multi.toString().substring(0, 2));
