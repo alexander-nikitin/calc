@@ -10,7 +10,29 @@ let start = function (n) {
     } while (!isNumber(money));
 }
 
-start();
+// start();
+
+let startBtn = document.getElementById('start');
+let incomeAdd = document.querySelector('.income button');
+let expensesAdd = document.querySelector('.expenses button');
+let depositCheck = document.querySelector('#deposit-check');
+let additionalIncomeInputs = document.querySelectorAll('.additional_income-item');
+let resultValueBudgetDay = document.getElementsByClassName('budget_day-value');
+let resultValueExpensesMonth = document.getElementsByClassName('expenses_month-value');
+let resultValueAdditionalIncome = document.getElementsByClassName('additional_income-value');
+let resultValueAdditionalExpenses = document.getElementsByClassName('additional_expenses-value');
+let resultValuePeriod = document.getElementsByClassName('income_period-value');
+let resultValueTarget = document.getElementsByClassName('target_month-value');
+let salaryAmount = document.querySelector('.salary-amount');
+let incomeTitle = document.querySelector('.income-title');
+let incomeAmount = document.querySelector('.income-amount');
+let expensesTitle = document.querySelector('.expenses-title');
+let expensesAmount = document.querySelector('.expenses-amount');
+let additionalExpenses = document.querySelector('.additional_expenses-item');
+let depositAmount = document.querySelector('.deposit-amount');
+let depositPercent = document.querySelector('.deposit-percent');
+let targetAmount = document.querySelector('.target-amount');
+let periodSelect = document.querySelector('.period-select');
 
 let appData = {
     budget: money,
@@ -102,12 +124,12 @@ let appData = {
     }
 }
 
-appData.asking();
-appData.getBudget();
+// appData.asking();
+// appData.getBudget();
 
 console.log('Расходы за месяц: ' + appData.expensesMonth);
 console.log('Цель будет достигнута через ' + appData.targetMonth() + ' месяцев');
-appData.statusIncome();
+// appData.statusIncome();
 
 for (key in appData) {
     console.log('Наша программа включает в себя данные: ' + key + ' со значением ' + appData[key]);
